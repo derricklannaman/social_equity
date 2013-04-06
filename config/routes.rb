@@ -1,5 +1,10 @@
 SocialEquity::Application.routes.draw do
   devise_for :users
+  resources :investors, :controller => "user", :type => "investor"
+  # resources :entrepreneurs, :controller => "user", :type => "entrepreneur"
+  root :to => "home#index"
+  match "/business" => "businesses#index"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

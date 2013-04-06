@@ -1,0 +1,13 @@
+<h1>Business List</h1>
+
+<ul>
+<% @businesses.each do |i|%>
+  <li><%= i.name %></li>
+  <li><%= i.description %></li>
+  <li><%= i.industry %></li>
+  <li><%= i.founded %></li>
+  <li><%= i.city %></li>
+  <li><%= number_to_currency(i.goal) %></li>
+  <li><%#= i.entrepreneur.name %></li>
+<% end %>
+</ul>
