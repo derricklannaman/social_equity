@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: businesses
+#
+#  id              :integer          not null, primary key
+#  name            :string(255)
+#  description     :text
+#  industry        :string(255)
+#  founded         :integer
+#  city            :string(255)
+#  state           :string(255)
+#  goal            :decimal(, )
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  entrepreneur_id :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  industry: MyString
+  founded: 1
+  city: MyString
+  state: MyString
+  goal: 9.99
+
+two:
+  name: MyString
+  description: MyText
+  industry: MyString
+  founded: 1
+  city: MyString
+  state: MyString
+  goal: 9.99

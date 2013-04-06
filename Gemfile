@@ -6,6 +6,17 @@ gem 'rails', '3.2.12'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem "devise"
+gem "haml"
+
+group :develoment do
+  gem 'pry-rails'
+  gem 'annotate'
+  gem 'meta_request'
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
 
 
 # Gems used only for assets and not required
