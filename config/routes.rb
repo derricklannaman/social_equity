@@ -3,7 +3,10 @@ SocialEquity::Application.routes.draw do
   resources :investors, :controller => "user", :type => "investor"
   # resources :entrepreneurs, :controller => "user", :type => "entrepreneur"
   root :to => "home#index"
-  match "/business" => "businesses#index"
+
+  resources :businesses
+  get "/signout" => "sessions#destroy"
+  get "/users" => "sessions#create"
 
 
   # The priority is based upon order of creation:

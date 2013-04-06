@@ -1,0 +1,9 @@
+<h1><%= "#{@business.name} Profile" %></h1>
+<div>
+  <h4><%= "We are looking to raise #{number_to_currency(@business.goal)}" %></h4>
+  Business Name: <%= @business.name %><br/>
+  Description: <%= @business.description %><br/>
+  Founded: <%= @business.founded %><br/>
+  City: <%= @business.city %>, State: <%= @business.state %><br/>
+
+</div>

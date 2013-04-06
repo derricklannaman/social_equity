@@ -8,6 +8,6 @@
   <li><%= i.founded %></li>
   <li><%= i.city %></li>
   <li><%= number_to_currency(i.goal) %></li>
-  <li><%#= i.entrepreneur.name %></li>
+  <%= link_to "Show details", business_path(i)  %>
 <% end %>
 </ul>
