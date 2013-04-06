@@ -8,6 +8,8 @@ SocialEquity::Application.routes.draw do
   get "/signout" => "sessions#destroy"
   get "/users" => "sessions#create"
 
+  match '/portfolio' => "users#portfolio"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
