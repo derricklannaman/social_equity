@@ -1,4 +1,4 @@
-<h1><%= "#{@business.name} Profile" %></h1>
+<h1><%= "#{@business.name} Investment Prospectus" %></h1>
 <div>
   <h4><%= "We are looking to raise #{number_to_currency(@business.goal)}" %></h4>
   Business Name: <%= @business.name %><br/>
@@ -6,4 +6,7 @@
   Founded: <%= @business.founded %><br/>
   City: <%= @business.city %>, State: <%= @business.state %><br/>
   <%= link_to "return", businesses_path %>
+</div>
+<div>
+  <a class="dwolla_button" href="http://localhost:3050/businesses/48" data-key="kTyDqsjkGP9E56advTf9MYYpyiZnySrKhWVmg6VcZY1TOSOPLo" data-tax="0" data-shipping="0.00" data-amount="1.00" data-desc="Equity purchase" data-name="Goods">Invest Now</a>
 </div>

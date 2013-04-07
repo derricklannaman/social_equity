@@ -1,0 +1,9 @@
+<h1><%= "#{@user.first_name @user.last_name}\' Profile" %></h1>
+<div>
+  <h4><%= "#{@user.first_name} is interested in < first 3 interests> " %></h4>
+  Business Name: <%= @user.first_name %><br/>
+  Biography: <%= @user.bio %><br/>
+  Investor/Entrepreneur: <%= @user.type %><br/>
+  City: <%= @user.state %>, State: <%= @user.state %><br/>
+  <%= link_to "return", businesses_path %>
+</div>

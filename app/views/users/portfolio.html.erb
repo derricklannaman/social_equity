@@ -1,0 +1,6 @@
+<h1><%= "#{@user.first_name}Portfolio" %></h1>
+<% @shares.each do |share| %>
+  <li><a href="/">ABC</a></li>
+  <li><%= number_to_currency(share.orig_face) %></li>
+<% end %>
+

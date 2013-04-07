@@ -1,12 +1,14 @@
 SocialEquity::Application.routes.draw do
-  devise_for :users
-  resources :investors, :controller => "user", :type => "investor"
-  # resources :entrepreneurs, :controller => "user", :type => "entrepreneur"
   root :to => "home#index"
 
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
+  resources :investors, :controller => "users", :type => "Investor"
+  resources :entrepreneurs, :controller => "users", :type => "Entrepreneur"
+
+
   resources :businesses
-  get "/signout" => "sessions#destroy"
-  get "/users" => "sessions#create"
+  match "/users" => "users#index", :type => "Investor"
+  # get "/signout" => "sessions#destroy"
 
   match '/portfolio' => "users#portfolio"
 
