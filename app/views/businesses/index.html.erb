@@ -14,6 +14,13 @@
         padding-top: 60px;
         padding-bottom: 40px;
       }
+      .edges {
+        padding: 7px;
+        margin: 5px;
+        border: 3px solid #FFF;
+        border-radius: 5px;
+        box-shadow: 1px 1px 32px 0px #EEE;
+      }
     </style>
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -123,7 +130,7 @@
       <div class="row">
         <h2 class="span12">Featured Social Equity Start-ups to invest in</h2>
         <% @businesses.each do |i|%>
-          <div class="span4">
+          <div class="span4 edges">
             <h4><%= i.name %></h4>
             <p>
               Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
