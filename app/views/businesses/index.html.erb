@@ -1,4 +1,4 @@
-<h1>Business List</h1>
+<!-- <h1>Business List</h1>
 
 <ul>
 <% @businesses.each do |i|%>
@@ -10,4 +10,232 @@
   <li><%= number_to_currency(i.goal) %></li>
   <%= link_to "Show details", business_path(i)  %>
 <% end %>
-</ul>
+</ul> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Social Equity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Social Equity</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#How">How It Works</a></li>
+              <li><a href="#Investments">Browse Investments</a></li>
+              <li><a href="#Investors">Browse Investors</a></li>
+              <li><a href="#Team">Team</a></li>
+            </ul>
+<!--             <form class="navbar-form pull-right">
+              <input class="span2" type="text" placeholder="Email">
+              <input class="span2" type="password" placeholder="Password">
+              <button type="submit" class="btn">Sign in</button>
+            </form> -->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Social Enterprise Equity Crowdfunding Made Easy</h1>
+        <h2 class="muted">Crowdfund Equity for the First Time</h2>
+        <br>
+        <br>
+        <img src="http://gust.com/assets/public_pages/home-hero-b1d5c7ad729b6db752c6ca0eeb3b930d.png">
+        <div class= 'span2'></div>
+        <div class= 'span3'>
+          <h2>For Investors</h2>
+          <p class='bottom'>Now you don't have to be Accredited to invest in what you believe in</p>
+          <p>
+          <a href="/investors">Learn more</a>
+          </p>
+        </div>
+          <div class='span3'>
+          <h2>For Start-ups</h2>
+            <p class='bottom'>Under the JOBS Act, start-ups can raise up to $1 million in equity funding online</p>
+            <p>
+            <a href="/entrepreneurs">Learn more</a>
+            </p>
+          </div>
+          <div class= 'span3'>
+          </div>
+      </div>
+
+<!-- </div> -->
+      <hr class="featurette-divider">
+      <!-- Example row of columns -->
+      <a name="How"></a>
+      <div class="row">
+<!--         <img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-chrome.png"> -->
+        <div class="span12">
+        <img src="http://www.plixeo.com/wp-content/uploads/2013/03/Social-Entrepreneurship.jpg">
+        </div> 
+      <h2 class="span12">How the Social Equity Model Works</h2>
+        <h3 class="muted span12">If you are an Investor interested in Social Enterprise:</h3>
+        <ol class="lead span12">
+          <li class="span12">Select a start-up to invest in based on the causes you feel most passionate about</li>
+          <li class="span12">Decide how much you would like to invest--this will drive your equity share size</li>
+          <li class="span12">Transfer investment funds using Dwolla for only a 25c fee for transactions above $10!</li>
+          <li class="span12">Receive electronic delivery of your shares and monitor your portfolio of Social Equity investments</li>
+          <li class="span12">Watch your investments grow</li>
+          <li class="span12">Receive tax credits for investing in a company with social purpose</li>
+          <li class="span12">Feel good about contributing to the greater good of the world</li>
+        </ol>
+        <h3 class="muted span12">If you are a Social Enterprise Start-up:</h3>
+        <ol class="lead span12">
+          <li class="span12">List your business on Social Equity and promote the causes you are working on</li>
+          <li class="span12">Decide how much equity financing you would like to raise--this will drive the share of equity sold</li>
+          <li class="span12">Receive investment funds using Dwolla!</li>
+          <li class="span12">Deliver electronic shares and keep your Investors updated</li>
+          <li class="span12">Watch your business grow</li>
+          <li class="span12">Feel good about contributing to the greater good of the world</li>
+        </ol>
+      <a name="Investments"></a> 
+      <hr class="featurette-divider">
+    </div>
+      
+
+      <div class="row">
+        <h2 class="span12">Featured Social Equity Start-ups to invest in</h2>
+        <% @businesses.each do |i|%>
+          <div class="span4">
+            <h4><%= i.name %></h4>
+            <p>
+              Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            </p>
+            <p><a class="btn" href="#">View details &raquo;</a></p>
+          </div>
+        <% end %>
+      </div>
+
+      <a name="Investors"></a> 
+      <hr class="featurette-divider">
+
+
+      <div class="row">
+        <h2 class="span12">Featured Social Equity Investors to connect with</h2>
+        <div class="span4">
+          <img src="http://www.fintechhack.com/assets/SallieKrawcheck-358e5475dc736b82e5a5747f236e6165.png">
+          <h4>Sallie Krawcheck</h4>
+          <p>Former head of Merrill Lynch, Smith Barney</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <img src="http://www.fintechhack.com/assets/MattHarris-13c0e47f9796c4ae2ec14a1967378f2a.png">
+          <h4>Matt Harris</h4>
+          <p>Bain Capital Ventures </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <img src="http://www.fintechhack.com/assets/MattTurck-77db3aebd7aed094510f112d534a78bf.png">
+          <h4>Matt Turck</h4>
+          <p>FirstMarkCapital</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <img src="http://www.fintechhack.com/assets/EricaFrontiero-5b9e013a905c9f2d537e8e2d6a5de67f.png">
+          <h4>Erica Frontiero</h4>
+          <p>GE Capital Markets</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <img src="http://www.fintechhack.com/assets/Bijan-655adfa18c669e9266ba7df92e0ed8ba.png">
+          <h4>Bijan Triester</h4>
+          <p>Barclays</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <img src="http://www.fintechhack.com/assets/Kim-b0eace1c1eb03618461d38ff1b1406fb.png">
+          <h4>Kim Trautmann</h4>
+          <p>Goldman Sachs Strategic Investments</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span12">
+          <img src="http://www.fintechhack.com/assets/Celina-32e342eeca7fd1bc87699105ee84eecf.png">
+          <h4>Celina Morejon</h4>
+          <p>Citi</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+<!--         <div class="span4">
+          <p></p>
+        </div>
+        <div class="span4">
+          <p></p>
+        </div> -->
+      </div>
+
+
+         <!-- START THE FEATURETTES -->
+      <a name="Team"></a> 
+      <hr class="featurette-divider">
+
+
+      <div class="featurette">
+        <h2 class="featurette-heading">Team</h2>
+        <p class="lead">
+          <ul>
+          <li class="lead">Eddie Washington</li>
+          <li class="lead">Derrick Lannaman</li>
+          <li class="lead">Jamal Sinclair O'Garro</li>
+          <li class="lead">Christine Moy</li>
+        </ul>
+      </div>
+
+
+
+      <!-- /END THE FEATURETTES -->
+      </div>
+
+      <hr>
+
+      <footer>
+        <p class="span12">&copy; Social Equity 2013</p>
+        <p class="span12">Powered by General Assemb.ly</p>
+        <img class="span12" src="https://generalassemb.ly/assets/ga-lockup-cb174e3732e2e19e5e92be8d4728d6ec.png">
+      </footer>
+
+    </div> <!-- /container -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
