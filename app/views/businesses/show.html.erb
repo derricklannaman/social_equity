@@ -1,12 +1,109 @@
-<h1><%= "#{@business.name} Investment Prospectus" %></h1>
-<div>
-  <h4><%= "We are looking to raise #{number_to_currency(@business.goal)}" %></h4>
-  Business Name: <%= @business.name %><br/>
-  Description: <%= @business.description %><br/>
-  Founded: <%= @business.founded %><br/>
-  City: <%= @business.city %>, State: <%= @business.state %><br/>
-  <%= link_to "return", businesses_path %>
-</div>
-<div>
-  <a class="dwolla_button" href="http://localhost:3050/businesses/48" data-key="kTyDqsjkGP9E56advTf9MYYpyiZnySrKhWVmg6VcZY1TOSOPLo" data-tax="0" data-shipping="0.00" data-amount="1.00" data-desc="Equity purchase" data-name="Goods">Invest Now</a>
-</div>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Template &middot; Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../../assets/stylesheets/businesses.css.scss" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 800px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 0 auto;
+        height: 350px;
+        text-align: center;
+        background: url("http://www.stiftung-mercator.de/uploads/pics/100202_Fotolia_4431585_XL_sk_design_02.jpg");
+        background-size: 100%;
+        background-repeat:no-repeat;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+        text-align: center;
+      }
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+        width: 100%;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+    </style>
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <h3 class="muted">We are Green Technology!</h3>
+      </div>
+
+      <hr>
+
+      <div class="jumbotron">
+        <h3>We are looking to raise</h3>
+        <h1><%= number_to_currency(@business.goal) %></h1>
+        <h2><%= @business.name %></h2>
+          <h4>Help us help the world!</h4>
+          Founded: <%= @business.founded %><br/>
+          <%= @business.city %>, NY<br/>
+          <div>
+            <a class="dwolla_button" href="http://localhost:3050/businesses/48" data-key="kTyDqsjkGP9E56advTf9MYYpyiZnySrKhWVmg6VcZY1TOSOPLo" data-tax="0" data-shipping="0.00" data-amount="1.00" data-desc="Equity purchase" data-name="Goods">Invest Now</a>
+          </div>
+      </div>
+
+      <hr>
+
+      <div>
+        <p>
+          There are continuing arguments over precisely who counts as a social entrepreneur. The lack of consensus on the definition of social entrepreneurship means that other disciplines are often confused with and mistakenly associated with social entrepreneurship. Philanthropists, social activists, environmentalists, and other socially-oriented practitioners are referred to as social entrepreneurs. It is important to set the function of social entrepreneurship apart from other socially oriented activities and identify the boundaries within which social entrepreneurs operate.[20] Some have advocated restricting the term to founders of organizations that primarily rely on earned income – meaning income earned directly from paying consumers. Others have extended this to include contracted work for public authorities, while still others include grants and donations. This argument is unlikely to be resolved soon. Peter Drucker, for example, once wrote that there was nothing so entrepreneurial as creating a new university: yet in most developed countries the majority of university funding comes from the state.
+        </p>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p class="span12">&copy; Social Equity 2013</p>
+        <p class="span12">Powered by General Assemb.ly</p>
+        <img class="span12" src="https://generalassemb.ly/assets/ga-lockup-cb174e3732e2e19e5e92be8d4728d6ec.png">
+      </footer>
+
+  </body>
+</html>
