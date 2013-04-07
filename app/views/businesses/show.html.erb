@@ -34,6 +34,10 @@
         background-size: 100%;
         background-repeat:no-repeat;
       }
+      .company {
+        background-color: #ffffff;
+        opacity: 0.75;
+      }
       .jumbotron h1 {
         font-size: 72px;
         line-height: 1;
@@ -78,9 +82,9 @@
       <hr>
 
       <div class="jumbotron">
-        <h3>We are looking to raise</h3>
+        <h3>We are looking to raise:</h3>
         <h1><%= number_to_currency(@business.goal) %></h1>
-        <h2><%= @business.name %></h2>
+        <h1 class="company"><%= @business.name %></h1>
           <h4>Help us help the world!</h4>
           Founded: <%= @business.founded %><br/>
           <%= @business.city %>, NY<br/>
